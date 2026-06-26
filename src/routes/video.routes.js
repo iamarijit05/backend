@@ -31,7 +31,7 @@ router
         publishAVideo
     );
 
-    router.route("/toggle/publish/:videoId").patch(togglePublishStatus); // ← move up
+    router.route("/toggle/publish/:videoId").patch(togglePublishStatus); 
 
     router
         .route("/:videoId")
