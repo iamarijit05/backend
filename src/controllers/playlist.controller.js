@@ -137,7 +137,7 @@ const addVideoToPlaylist = asyncHandler(async (req, res) => {
         throw new ApiError(400, "Invalid Video ID")
     }
 
-    const playlist = Playlist.findById(playlistId)
+    const playlist = await Playlist.findById(playlistId)
     if(!playlist) {
         throw new ApiError(404, "Playlist Not Found")
     }
